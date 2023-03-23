@@ -5,11 +5,11 @@ public class ZeroFilledSubArray {
     // default constructor
     public ZeroFilledSubArray(){}
 
-    /*
-        This method uses n*(n+1)/2 to get the summation till the point we get continuos zeroes
-        and then add it up continuously
-        @param nums
-        @return numOfZeroFilledSubarray
+    /**
+     * This method uses n*(n+1)/2 to get the summation till the point we get continuos zeroes
+     * and then add it up continuously
+     * @param nums
+     * @return
      */
     public long zeroFilledSubarrayPart2(int[] nums) {
         long numOfZeroFilledSubarray = 0;
@@ -26,11 +26,11 @@ public class ZeroFilledSubArray {
         return numOfZeroFilledSubarray;
     }
 
-    /*
-        This method is going to update result as we go on and it's gonna update using the logic
-        res += ++lengthOfTrailingZeroes;
-        @param nums
-        @return numOfZeroFilledSubarray
+    /**
+     * This method is going to update result as we go on and it's gonna update using the logic
+     *         res += ++lengthOfTrailingZeroes;
+     * @param nums
+     * @return
      */
     public long zeroFilledSubarray(int[] nums) {
         long res = 0;
