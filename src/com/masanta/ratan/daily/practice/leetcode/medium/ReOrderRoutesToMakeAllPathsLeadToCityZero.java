@@ -60,6 +60,7 @@ public class ReOrderRoutesToMakeAllPathsLeadToCityZero {
         ReOrderRoutesToMakeAllPathsLeadToCityZero reOrderRoutesToMakeAllPathsLeadToCityZero =
                 new ReOrderRoutesToMakeAllPathsLeadToCityZero();
         System.out.println(reOrderRoutesToMakeAllPathsLeadToCityZero.minReorder(6,edgeArray));
+        System.out.println(reOrderRoutesToMakeAllPathsLeadToCityZero.minReorder3(6, edgeArray));
     }
 
     private class Edge {
@@ -95,6 +96,39 @@ public class ReOrderRoutesToMakeAllPathsLeadToCityZero {
             al.get(c[1]).add(-c[0]);
         }
         return dfs2(al, new boolean[n], 0);
+    }
+
+    /*                      Solution - 3                    */
+
+
+    public int minReorder3(int numberOfCities, int[][] connectionArray){
+        //create adjecency List
+        List<List<Integer>> adjacencyList = new ArrayList<>();
+        //Initalize each element of the adjacency list with an empty Integer ArrayList
+        for(int i = 0; i < numberOfCities; i++){
+            adjacencyList.add(new ArrayList<Integer>());
+        }
+        // fill adjacency matrix
+        for(int[] connectionPair: connectionArray){
+            adjacencyList.get(connectionPair[0]).add(connectionPair[1]); // Add current Link
+            adjacencyList.get(connectionPair[1]).add(- connectionPair[0]); // Add negative link for the reverse check
+        }
+
+        return doDfs3(adjacencyList, new boolean[numberOfCities], 0);
+
+    }
+
+    private int doDfs3(List<List<Integer>> adjacencyList, boolean[] visitedMatrix , int root){
+        int count = 0;
+        visitedMatrix[root] = true; // set true for the element we are sending
+
+
+        for(int toNode: adjacencyList.get(root)){
+            if(!visitedMatrix[Math.abs(toNode)]){
+                count += doDfs3(adjacencyList, visitedMatrix, Math.abs(toNode)) + ((toNode > 0) ? 1 : 0);
+            }
+        }
+        return count;
     }
 
 }
