@@ -59,4 +59,8 @@ public class MinimumCostForTickets {
         System.out.println(minimumCostForTickets.mincostTickets(days, costs));
     }
 
+    /*
+    https://leetcode.com/problems/minimum-cost-for-tickets/solutions/3349729/java-python-and-c-easy-solutions-with-exaplanation-look-at-once/
+     */
+
 }
