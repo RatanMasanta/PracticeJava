@@ -85,4 +85,9 @@ public class ScrambleStrings {
         System.out.println(scrambleStrings.isScramble(s1, s2));
         System.out.println(scrambleStrings.isScramble(s3, s4));
     }
+
+    /*
+        Leetcode Discuss: https://leetcode.com/problems/scramble-string/solutions/3357439/easy-solutions-in-java-python-and-c-look-at-once-with-exaplanation/
+
+     */
 }
