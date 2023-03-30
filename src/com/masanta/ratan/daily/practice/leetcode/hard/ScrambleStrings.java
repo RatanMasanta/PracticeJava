@@ -88,6 +88,6 @@ public class ScrambleStrings {
 
     /*
         Leetcode Discuss: https://leetcode.com/problems/scramble-string/solutions/3357439/easy-solutions-in-java-python-and-c-look-at-once-with-exaplanation/
-
+        LeetCode Editorial: https://leetcode.com/problems/scramble-string/editorial/
      */
 }
