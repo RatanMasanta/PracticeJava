@@ -1,6 +1,8 @@
 package com.masanta.ratan.daily.practice.leetcode.medium;
 
 import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
 
 public class MinimumCostForTickets {
 
@@ -51,12 +53,59 @@ public class MinimumCostForTickets {
         return dp[n];
     }
 
+    /**
+     *
+     *
+     * This method does the change in O(n);
+     * We use a DP Equation usig Bottom Up approach to check for the Min value to be used.
+     * travelCost[i] = Math.min((travelCost[i-1] + costs[0]),
+     * Math.min((travelCost[i-7] + costs[1]), (travelCost[i-30]+ cost[2])))
+     *
+     * @param days travel days in the year
+     * @param costs array of costs for daily, weekly and monthly
+     * @return minimum number of dollars to travel every day in the given dalys of the list
+     */
+    public int mincostTicketsPart2(int[] days, int[] costs) {
+        int[] travelCost = new int[days[days.length-1]+1];
+
+        // Set for identifying travel dates
+        Set<Integer> set = new HashSet<>();
+        for(int day: days){
+            set.add(day);
+        }
+
+        for(int i=1;i<travelCost.length;i++){
+            if(!set.contains(i)) {
+                // Non travel day simply copy the value from previous day
+                travelCost[i] =travelCost[i-1];
+            } else{
+                int priceUsingDailyPass = travelCost[i-1]+ costs[0];
+
+                int priceUsingWeeklyPass = costs[1];
+                if(i>=7){
+                    priceUsingWeeklyPass = travelCost[i-7]+ costs[1];
+                }
+
+
+                int priceUsingMonthlyPass = costs[2];
+                if(i>=30){
+                    priceUsingMonthlyPass = travelCost[i-30]+ costs[2];
+                }
+                // comparison between the possible 3 values
+                travelCost[i]= Math.min(priceUsingMonthlyPass, Math.min(priceUsingDailyPass,priceUsingWeeklyPass));
+            }
+        }
+
+        return travelCost[travelCost.length-1];
+    }
+
 
     public static void main(String[] args) {
         MinimumCostForTickets minimumCostForTickets = new MinimumCostForTickets();
         int[] days = {1,2,3,4,5,6,7,8,9,10,30,31};
         int[] costs = {2,7,15};
         System.out.println(minimumCostForTickets.mincostTickets(days, costs));
+        System.out.println(minimumCostForTickets.mincostTicketsPart2(days, costs));
     }
 
     /*
