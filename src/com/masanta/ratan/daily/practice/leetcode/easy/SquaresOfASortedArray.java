@@ -53,4 +53,9 @@ public class SquaresOfASortedArray {
         System.out.println(Arrays.toString(squaresOfASortedArray.sortedSquaresWithLibraryUse(nums)));
     }
 
+    /*
+        Leetcode discuss: https://leetcode.com/problems/squares-of-a-sorted-array/solutions/2943161/full-description-on-how-to-solve-using-two-pointers-beats-100/?languageTags=java
+
+     */
+
 }
