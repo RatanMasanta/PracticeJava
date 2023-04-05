@@ -47,4 +47,12 @@ public class FindNumbersWithEvenNumberOfDigits {
         }
         return list.size();
     }
+
+    public static void main(String[] args) {
+        FindNumbersWithEvenNumberOfDigits findNumbersWithEvenNumberOfDigits =
+                new FindNumbersWithEvenNumberOfDigits();
+        int[] nums = {1,10,12,14,123,124,1245,12456,124569,123654,32145698};
+        System.out.println(findNumbersWithEvenNumberOfDigits.findNumbersUsingLog(nums));
+        System.out.println(findNumbersWithEvenNumberOfDigits.findNumbersUsingLog(nums));
+    }
 }
