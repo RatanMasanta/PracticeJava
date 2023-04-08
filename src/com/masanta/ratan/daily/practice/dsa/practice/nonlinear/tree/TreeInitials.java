@@ -154,7 +154,7 @@ public class TreeInitials  extends TreeNode{
         return preOrder;
     }
 
-    public List<Integer> iterativePostOrder(TreeNode tree){
+    public List<Integer> iterativePostOrderUsingTwoStacks(TreeNode tree){
         ArrayList < Integer > postOrder = new ArrayList < Integer > ();
         if (tree == null) return postOrder;
 
@@ -176,6 +176,58 @@ public class TreeInitials  extends TreeNode{
         }
         return postOrder;
     }
+
+    /**
+     * Intuition: First we need to understand what we do in a postorder traversal. We first explore the left side of the root node and keep on moving left until we encounter a node pointing to NULL. As now there is nothing more to traverse on the left, we move to the immediate parent(say node P) of that NULL node. Now we again start our left exploration from the right child of that node P. We will print a node’s value only when we have returned from its both children.
+     *
+     * Approach:
+     *
+     * The algorithm steps can be stated as:
+     *
+     * We take an explicit data structure and a cur pointer pointing to the root of the tree.
+     * We run a while loop till the time the cur is not pointing to NULL or the stack is non-empty.
+     * If cur is not pointing to NULL, it means then we simply push that value to the stack and move the cur pointer to its left child because we want to explore the left child before the root or the right child.
+     * If the cur is pointing to NULL, it means we can’t go further left, then we take a variable temp and set it to  cur’s parent’s right child (as we have visited the left child, now we want to visit the right child). We have node cur’s parent at the top of the stack.
+     * If node temp is not pointing to NULL, we simply initialise cur as node temp so that we can again start looking at the left of node temp from the next iteration.
+     * If node temp is pointing to NULL, then first of all we are sure that we have visited both children of temp’s parent, so it’s time to print it. Therefore we set temp to its parent( present at the top of stack), pop the stack and then print temp’s value.
+     * Additionally,  this new temp(parent of NULL-pointing node) can be the right child of the node present at the top of stack after popping.In that case the node at top of the stack is parent of temp and the next node to be printed. Therefore we run an additional while loop
+     * to check if that is the case, if true then again move temp to its parent and print its value.
+     *
+     *
+     * @param node provided binary tree
+     * @return integers in the postorder (Left Right Root) of the given tree
+     */
+    public List<Integer> iterativePostOrderUsingSingleStack(TreeNode node){
+        ArrayList<Integer> postOrder = new ArrayList<Integer>();
+        if(node == null) return postOrder;
+        Stack<TreeNode> stackForSingleStackIterationPostOrder = new Stack<TreeNode>();
+        TreeNode currentNode = node;
+        TreeNode temporaryNode = null;
+        // remember the logic as this one is not intuitive
+        while(!stackForSingleStackIterationPostOrder.isEmpty() ||  currentNode != null){
+            if(currentNode != null){
+                stackForSingleStackIterationPostOrder.push(currentNode);
+                currentNode = currentNode.getLeft();
+            } else{
+                temporaryNode = stackForSingleStackIterationPostOrder.peek().getRight();
+                if(temporaryNode == null){
+                    temporaryNode = stackForSingleStackIterationPostOrder.peek();
+                    stackForSingleStackIterationPostOrder.pop();
+                    postOrder.add(temporaryNode.getVal());
+                    while(!stackForSingleStackIterationPostOrder.isEmpty()
+                    && temporaryNode == stackForSingleStackIterationPostOrder.peek().getRight()){
+                        temporaryNode = stackForSingleStackIterationPostOrder.peek();
+                        stackForSingleStackIterationPostOrder.pop();
+                        postOrder.add(temporaryNode.getVal());
+                    }
+                } else {
+                    currentNode = temporaryNode;
+                }
+            }
+        }
+        return postOrder;
+    }
+
 
     /** BFS Approaches / Level wise approaches **/
 
@@ -228,6 +280,9 @@ public class TreeInitials  extends TreeNode{
         System.out.println("InOrder using Iteration: ");
         System.out.println(Arrays.toString(treeInitials.iterativeInOrder(treeInitials).toArray()));
         System.out.println("PostOrder traversal using iteration");
-        System.out.println(Arrays.toString(treeInitials.iterativePostOrder(treeInitials).toArray()));
+        System.out.println("PostOrder traversal using iteration with two stacks");
+        System.out.println(Arrays.toString(treeInitials.iterativePostOrderUsingTwoStacks(treeInitials).toArray()));
+        System.out.println("PostOrder traversal using iteration with a single stack");
+        System.out.println(Arrays.toString(treeInitials.iterativePostOrderUsingSingleStack(treeInitials).toArray()));
     }
 }
