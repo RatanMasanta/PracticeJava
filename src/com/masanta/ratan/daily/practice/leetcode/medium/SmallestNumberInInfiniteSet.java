@@ -115,6 +115,15 @@ Otherwise, we push it into min-heap addedIntegers and hash set isPresent.
     }
 
     public static void main(String[] args) {
+        SmallestNumberInInfiniteSet smallestNumberInInfiniteSet = new SmallestNumberInInfiniteSet();
+        smallestNumberInInfiniteSet.addBack(2);
+        System.out.println(smallestNumberInInfiniteSet.popSmallest());
+        System.out.println(smallestNumberInInfiniteSet.popSmallest());
+        System.out.println(smallestNumberInInfiniteSet.popSmallest());
+        smallestNumberInInfiniteSet.addBack(1);
+        System.out.println(smallestNumberInInfiniteSet.popSmallest());
+        System.out.println(smallestNumberInInfiniteSet.popSmallest());
+        System.out.println(smallestNumberInInfiniteSet.popSmallest());
 
     }
 }
