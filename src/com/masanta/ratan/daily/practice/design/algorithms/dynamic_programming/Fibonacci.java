@@ -1,4 +1,4 @@
-package com.masanta.ratan.daily.practice.dsa.practice.algorithms.dynamic_programming;
+package com.masanta.ratan.daily.practice.design.algorithms.dynamic_programming;
 
 import java.util.Arrays;
 
