@@ -26,9 +26,9 @@ public class BestTimeToBuyAndSellStockWithTransactionFees {
      *
      *
      *
-     * @param prices
-     * @param fee
-     * @return
+     * @param prices prices array of stock
+     * @param fee transaction fees of each transaction
+     * @return max Profit
      */
     public int maxProfit(int[] prices, int fee) {
         int n = prices.length;
