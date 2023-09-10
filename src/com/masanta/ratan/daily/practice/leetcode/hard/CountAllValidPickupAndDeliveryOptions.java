@@ -50,6 +50,13 @@ public class CountAllValidPickupAndDeliveryOptions {
             And the number of deliveries have to be set in n ways.
             So for all possible combinations, we have to check the formula (2*n - 1) * n
             So, with every increasing value, we get a multiple here:
+            So to summarize, for every i we have (2i-1)*i ways to place ith order,
+            so for n we'll have (2n-1)*i * (number of ways to place n-1th order).
+            
+            Hence in our code, for i = 2 to i <= n we have
+            answer = answer* i * (2i-1).
+            We do %mod to make our answer in permissible range.
+            At last return answer.
         */
         int  totalCount = 1;
         for( int i = 2; i <=n; i++){
