@@ -19,7 +19,7 @@ public class CheckCompletenessOfBinaryTree {
     }
 
     public static boolean findCompletenessOfBinaryTree(TreeNode root){
-        Queue<TreeNode> queue = new LinkedList<TreeNode>();
+        Queue<TreeNode> queue = new LinkedList<>();
         queue.add(root);
         while(queue.peek() != null){
             TreeNode node = queue.remove();
