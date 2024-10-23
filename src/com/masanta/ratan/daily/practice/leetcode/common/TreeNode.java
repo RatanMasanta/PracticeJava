@@ -1,7 +1,10 @@
 package com.masanta.ratan.daily.practice.leetcode.common;
 
-  public class TreeNode {
-      int val;
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class TreeNode {
+      private int val;
       TreeNode left;
       TreeNode right;
       public TreeNode() {}
@@ -35,4 +38,20 @@ package com.masanta.ratan.daily.practice.leetcode.common;
       public void setRight(TreeNode right) {
           this.right = right;
       }
+
+      @Override
+      public String toString(){
+          StringBuilder sb = new StringBuilder();
+          sb.append(val);
+          if (left != null) {
+              sb.append(" (L: ").append(left.toString()).append(")");
+          }
+          if (right != null) {
+              sb.append(" (R: ").append(right.toString()).append(")");
+          }
+          return sb.toString();
+      }
+
+
+
   }
