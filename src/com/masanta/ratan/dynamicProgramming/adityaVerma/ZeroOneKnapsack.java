@@ -4,9 +4,9 @@ import java.util.Arrays;
 
 public class ZeroOneKnapsack {
 
-    // static matrix for keeping values in memoization
+    // static matrix for keeping values in memoization (Top Down)
     static int[][] t;
-    // static matrix for keeping solution values in top down dp approach
+    // static matrix for keeping solution values in tabulation dp approach (Bottom Up)
     static int[][] tp;
 
     void main() {
@@ -26,7 +26,7 @@ public class ZeroOneKnapsack {
 
         tp = new int[weights.length + 1][maxCapacity + 1];
 
-        System.out.println(STR."Top Down approach returns \{zeroOneKnapSizeTopDownApproach(weights, values, maxCapacity, weights.length)}");
+        System.out.println(STR."Top Down approach returns \{zeroOneKnapSizeTabulationApproach(weights, values, maxCapacity, weights.length)}");
 
 
     }
@@ -78,7 +78,7 @@ public class ZeroOneKnapsack {
      * @param n
      * @return
      */
-    private static int zeroOneKnapSizeTopDownApproach(int[] weights, int[] values, int maxCapacity, int n){
+    private static int zeroOneKnapSizeTabulationApproach(int[] weights, int[] values, int maxCapacity, int n){
         for(int i = 0; i < n+1;i++) {
             for (int j = 0; j < weights.length + 1; j++) {
                 // initialization
