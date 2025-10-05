@@ -41,7 +41,7 @@ public class MinimumNumberOfRemovalsToMakeMountainArray_1671 {
 
     void main(){
         int[] nums = {2,1,1,5,6,2,3,1};
-        System.out.println(STR."minimum mountain removals for array \{Arrays.toString(nums)} is \{minimumMountainRemovals(nums)}");
+        System.out.println("minimum mountain removals for array " + Arrays.toString(nums) + "is " + minimumMountainRemovals(nums));
     }
 
     /**

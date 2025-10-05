@@ -1,4 +1,4 @@
-package com.masanta.ratan.daily.practice.dsa.sixteenweekplan.day3;
+package com.masanta.ratan.daily.practice.dsa.sixteenweekplan.day4;
 
 import java.util.Arrays;
 

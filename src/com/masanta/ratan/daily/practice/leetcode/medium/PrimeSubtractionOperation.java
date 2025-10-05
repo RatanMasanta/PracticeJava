@@ -43,7 +43,7 @@ package com.masanta.ratan.daily.practice.leetcode.medium;
 public class PrimeSubtractionOperation {
 
     void main(){
-        System.out.println(STR."Can we transform the array {4,9,6,10} to a strictly ascending array using prime subtraction operation ? \{primeSubOperation(new int[] {4,9,6,10})}");
+        System.out.println("Can we transform the array {4,9,6,10} to a strictly ascending array using prime subtraction operation ? " + primeSubOperation(new int[] {4,9,6,10}));
     }
 
     public static boolean primeSubOperation(int[] nums) {

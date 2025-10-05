@@ -42,8 +42,8 @@ public class LongestSquareStreakInAnArray {
 
     public static void main(String[] args) {
         int nums[] = new int[] {2,3,5,4,6,8,9,26,16,81};
-        System.out.println(STR."Longest square streak in \{Arrays.toString(nums)} is \{longestSquareStreak1(nums)}");
-        System.out.println(STR."Longest square streak in \{Arrays.toString(nums)} via second method is \{longestSquareStreak2(nums)}");
+        System.out.println("Longest square streak in " + Arrays.toString(nums) + "is " + longestSquareStreak1(nums));
+        System.out.println("Longest square streak in " + Arrays.toString(nums) + "via second method is " + longestSquareStreak2(nums));
 
     }
 

@@ -34,7 +34,7 @@ public class SearchPattern {
     void main(){
         String pat = "aaba";
         String txt = "aabaacaadaabaaba";
-        System.out.println(STR."Pattern indices present in text are: \{SearchPattern.search(pat, txt)}");
+        System.out.println("Pattern indices present in text are: " + SearchPattern.search(pat, txt));
     }
 
     public static ArrayList<Integer> search(String pat, String txt) {

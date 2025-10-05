@@ -35,7 +35,7 @@ public class KLargestElements {
     static void main(String[] args){
         int arr[] = {1, 23, 12, 9, 30, 2, 50};
         int k = 4;
-        System.out.println(STR."\{k} largest elements of arr: \{Arrays.toString(arr)} is : \{kLargest(arr, k)}");
+        System.out.println(k + " largest elements of arr: " + Arrays.toString(arr)+"is : " + kLargest(arr, k));
     }
 
     public static ArrayList<Integer> kLargest(int[] arr, int k) {

@@ -10,7 +10,7 @@ public class SubsetSumProblem {
         int arr[] = {2,3,7,8,10}, sum =  11;
         int n = arr.length;
         tp = new boolean[n+1][sum+1];
-        System.out.println(STR."Can \{sum} be generated from the subsets of the array \{Arrays.toString(arr)} ? \{subsetSumProblemThroughTabulation(arr, sum, n)}");
+        System.out.println("Can " + sum + " be generated from the subsets of the array " + Arrays.toString(arr) + " ? " + subsetSumProblemThroughTabulation(arr, sum, n));
 
     }
 

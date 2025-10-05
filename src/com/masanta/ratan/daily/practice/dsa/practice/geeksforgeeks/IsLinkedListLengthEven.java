@@ -36,7 +36,7 @@ public class IsLinkedListLengthEven {
         node.getNext().getNext().getNext().setNext(new ListNode(4));
         node.getNext().getNext().getNext().getNext().setNext(new ListNode(10));
 
-        System.out.println(STR."Is the linked list length even? \{isLengthEven(node)}");
+        System.out.println("Is the linked list length even? " + isLengthEven(node));
     }
 
     public static boolean isLengthEven(ListNode head) {

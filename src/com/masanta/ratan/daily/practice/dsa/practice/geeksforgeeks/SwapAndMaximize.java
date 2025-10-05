@@ -26,7 +26,7 @@ public class SwapAndMaximize {
 
     void main() {
         Long[] arr = new Long[] {4L, 2L, 1L, 8L};
-        System.out.println(STR."After swapping and maximizing the array \{Arrays.toString(arr)}, we get \{maxSum(arr)}");
+        System.out.println("After swapping and maximizing the array " + Arrays.toString(arr) + " we get " + maxSum(arr));
 
     }
 

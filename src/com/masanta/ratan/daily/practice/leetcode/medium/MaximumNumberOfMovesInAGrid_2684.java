@@ -45,7 +45,7 @@ public class MaximumNumberOfMovesInAGrid_2684 {
 
     void main(){
         int[][] matrix = new int[][] {{2,4,3,5},{5,4,9,3},{3,4,2,11},{10,9,13,15}};
-        System.out.println(STR."The maximum number of moves in a grid {2,4,3,5},{5,4,9,3},{3,4,2,11},{10,9,13,15} is \{maxMoves(matrix)}");
+        System.out.println("The maximum number of moves in a grid {2,4,3,5},{5,4,9,3},{3,4,2,11},{10,9,13,15} is " + maxMoves(matrix));
     }
 
 

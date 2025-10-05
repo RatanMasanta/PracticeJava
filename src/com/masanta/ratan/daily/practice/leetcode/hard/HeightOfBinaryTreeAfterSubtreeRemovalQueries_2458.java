@@ -60,7 +60,7 @@ public class HeightOfBinaryTreeAfterSubtreeRemovalQueries_2458 {
 
         int[] queries = new int[] {4,2,5,7};
 
-        System.out.println(STR."Resultant heights after queries \{Arrays.toString(queries)} is \{Arrays.toString(treeQueries(root, queries))} ");
+        System.out.println("Resultant heights after queries " + Arrays.toString(queries) + " is " + Arrays.toString(treeQueries(root, queries)));
     }
 
     static final int[] heights = new int[100001];

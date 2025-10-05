@@ -32,7 +32,7 @@ public class AlternateSorting {
 
     public static void main(String[] args) {
         int arr[] = new int []  {7, 1, 2, 3, 4, 5, 6};
-        System.out.println(STR."The alternate sorting results for array \{Arrays.toString(arr)} are: \{alternateSort(arr)}");
+        System.out.println("The alternate sorting results for array " + Arrays.toString(arr) +  " are: " + alternateSort(arr));
     }
 
     /**

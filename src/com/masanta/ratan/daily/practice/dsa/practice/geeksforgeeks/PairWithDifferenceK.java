@@ -33,7 +33,7 @@ public class PairWithDifferenceK {
 
     void main() {
         int arr[] = {8, 12, 16, 4, 0, 20}, k = 4;
-        System.out.println(STR."Count pairs with difference of  \{k} in \{Arrays.toString(arr)} are \{countPairsWithDiffK(arr,k)}");
+        System.out.println("Count pairs with difference of  " + k + " in " + Arrays.toString(arr) + "are " + countPairsWithDiffK(arr,k));
     }
 
     static int countPairsWithDiffK(int[] arr, int k) {

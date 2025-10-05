@@ -38,7 +38,7 @@ public class FindSumOfLastNNodesOfTheLinkedList {
         node.getNext().getNext().getNext().setNext(new ListNode(4));
         node.getNext().getNext().getNext().getNext().setNext(new ListNode(10));
 
-        System.out.println(STR."sum of last N nodes is: \{sumOfLastN_ListNodes(node, 3)}");
+        System.out.println("sum of last N nodes is: " + sumOfLastN_ListNodes(node, 3));
     }
 
 
