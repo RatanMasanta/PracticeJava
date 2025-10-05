@@ -67,7 +67,7 @@ public class MinimumTotalDistanceTraveled_2463 {
         robot.add(4);
         robot.add(6);
         int[][] factory = {{2,2},{6,2}};
-        System.out.println(STR." With robots at \{robot}, and factories at: {2,2},{6,2}, minimum total distance travelled: \{minimumTotalDistance(robot,factory)}");
+        System.out.println(" With robots at " + robot+", and factories at: {2,2},{6,2}, minimum total distance travelled: " + minimumTotalDistance(robot,factory));
     }
 
 

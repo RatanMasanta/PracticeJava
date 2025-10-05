@@ -59,7 +59,7 @@ public class CircularSentence_2490 {
 
     void main(){
         String sentence = "leetcode exercises sound delightful";
-        System.out.println(STR."\{sentence} is a circular sentence? Method 1 : \{isCircularSentence(sentence)}, and check on 2nd method: \{isCircularSentence1(sentence)}" );
+        System.out.println(sentence + " is a circular sentence? Method 1 : " + isCircularSentence(sentence) + ",  and check on 2nd method: " + isCircularSentence1(sentence) );
     }
 
     private static boolean isCircularSentence(String s) {

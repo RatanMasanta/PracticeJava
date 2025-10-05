@@ -47,8 +47,8 @@ public class RemoveAllSubFolders_1233 {
         String[] folder1 = new String[] {"/a","/a/b","/c/d","/c/d/e","/c/f"};
         String[] folder2 = new String[] {"/a","/a/b/c","/a/b/d"};
 
-        System.out.println(STR."For second method, folder structure \{Arrays.toString(folder1)} , the final array after removal is : \{RemoveAllSubFolders_1233.removeSubfolders1(folder1)}");
-        System.out.println(STR."For second method, folder structure \{Arrays.toString(folder2)} , the final array after removal is : \{RemoveAllSubFolders_1233.removeSubfolders1(folder2)}");
+        System.out.println("For second method, folder structure " + Arrays.toString(folder1) + " , the final array after removal is : " + RemoveAllSubFolders_1233.removeSubfolders1(folder1));
+        System.out.println("For second method, folder structure " + Arrays.toString(folder2) + " , the final array after removal is : " + RemoveAllSubFolders_1233.removeSubfolders1(folder2));
 
     }
 

@@ -37,7 +37,7 @@ public class QuickSortOfALinkedList {
         node.next.next = new Node(3);
         node.next.next.next = new Node(8);
 
-        System.out.println(STR."The quickSort returns : \{quickSort(node).toString()}");
+        System.out.println("The quickSort returns : " + quickSort(node).toString());
     }
 
     /**

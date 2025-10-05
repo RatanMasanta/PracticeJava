@@ -13,7 +13,7 @@ public class ZeroOneKnapsack {
         int[] weights = {1, 3, 4, 5}, values = {1, 4, 5, 7};
         int maxCapacity = 7;
 
-        System.out.println(STR."The max profit of carrying weights \{Arrays.toString(weights)} having values \{Arrays.toString(values)} using recursion is \{zeroOneKnapSackRecursive(weights, values, maxCapacity, weights.length)}");
+        System.out.println("The max profit of carrying weights " + Arrays.toString(weights) +  "having values " + Arrays.toString(values) + " using recursion is " + zeroOneKnapSackRecursive(weights, values, maxCapacity, weights.length));
 
 
         // Changes for memoization
@@ -22,11 +22,11 @@ public class ZeroOneKnapsack {
             Arrays.fill(t[i], -1);
         }
 
-        System.out.println(STR."The max profit of carrying weights \{Arrays.toString(weights)} having values \{Arrays.toString(values)} using memoization is \{zeroOneKnapSackMemoization(weights, values, maxCapacity, weights.length)}");
+        System.out.println("The max profit of carrying weights " + Arrays.toString(weights) + " having values " + Arrays.toString(values) + " using memoization is " + zeroOneKnapSackMemoization(weights, values, maxCapacity, weights.length));
 
         tp = new int[weights.length + 1][maxCapacity + 1];
 
-        System.out.println(STR."Top Down approach returns \{zeroOneKnapSizeTabulationApproach(weights, values, maxCapacity, weights.length)}");
+        System.out.println("Top Down approach returns " + zeroOneKnapSizeTabulationApproach(weights, values, maxCapacity, weights.length));
 
 
     }

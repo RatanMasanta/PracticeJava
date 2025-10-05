@@ -40,7 +40,7 @@ public class InsertInSortedWayInASortedDLL {
 
         int insertNum = 9;
 
-        System.out.println(STR."Value after adding \{insertNum} is \{sortedInsert(node, insertNum).toString()}");
+        System.out.println("Value after adding " + insertNum + " is " + sortedInsert(node, insertNum).toString());
 
 
     }

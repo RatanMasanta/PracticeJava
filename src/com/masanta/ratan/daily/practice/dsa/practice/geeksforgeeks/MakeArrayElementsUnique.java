@@ -29,7 +29,7 @@ import java.util.HashSet;
 public class MakeArrayElementsUnique {
 
     void main(){
-        System.out.println(STR."The minimum number of increment operations for  {1, 1, 2, 3} is \{minIncrements(new int[] {1, 1, 2, 3})}");
+        System.out.println("The minimum number of increment operations for  {1, 1, 2, 3} is " + minIncrements(new int[] {1, 1, 2, 3}));
     }
 
     /**

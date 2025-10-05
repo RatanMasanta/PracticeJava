@@ -37,8 +37,8 @@ public class ModifyTheArray {
     public static void main(String[] args) {
         int arr1[] = new int[] {0, 2, 2, 2, 0, 6, 6, 0, 0, 8};
         int arr2[] = new int[] {2, 2, 0, 4, 0, 8};
-        System.out.println(STR."Modified and rearranged array for array 1 \{Arrays.toString(arr1)} is \{modifyAndRearrangeArr(arr1)}");
-        System.out.println(STR."Modified and rearranged array for array 2 \{Arrays.toString(arr2)} is \{modifyAndRearrangeArr(arr2)}");
+        System.out.println("Modified and rearranged array for array 1 " + Arrays.toString(arr1) + " is " + modifyAndRearrangeArr(arr1));
+        System.out.println("Modified and rearranged array for array 2 " + Arrays.toString(arr2) + "is " + modifyAndRearrangeArr(arr2));
 
     }
 

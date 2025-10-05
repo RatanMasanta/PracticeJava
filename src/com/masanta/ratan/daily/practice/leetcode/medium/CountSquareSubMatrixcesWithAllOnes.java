@@ -52,8 +52,8 @@ public class CountSquareSubMatrixcesWithAllOnes {
                 {1,1,1,1},
                 {0,1,1,1}};
 
-        System.out.println(STR."Count number of squares in matrix via method 1: \{countSquares1(matrix)}");
-        System.out.println(STR."Count number of squares in matrix via method 1: \{countSquares2(matrix)}");
+        System.out.println("Count number of squares in matrix via method 1: " + countSquares1(matrix));
+        System.out.println("Count number of squares in matrix via method 1: " + countSquares2(matrix));
 
 
     }

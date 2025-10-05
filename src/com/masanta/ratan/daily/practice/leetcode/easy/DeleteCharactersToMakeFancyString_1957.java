@@ -46,7 +46,7 @@ public class DeleteCharactersToMakeFancyString_1957 {
 
     void main() {
         String s = "aaabaaaa";
-        System.out.println(STR."After changing \{s} to the fance string we get \{makeFancyString(s)}");
+        System.out.println("After changing " + s + "to the fance string we get " + makeFancyString(s));
     }
 
 

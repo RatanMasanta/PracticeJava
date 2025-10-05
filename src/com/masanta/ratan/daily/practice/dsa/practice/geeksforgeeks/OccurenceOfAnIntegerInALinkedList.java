@@ -16,7 +16,7 @@ public class OccurenceOfAnIntegerInALinkedList {
 
         int finderValue = 1;
 
-        System.out.println(STR."The occurence of \{finderValue} is \{count(listNode, finderValue)}");
+        System.out.println("The occurence of " + finderValue + "is " + count(listNode, finderValue));
     }
 
     public static int count(ListNode head, int key) {

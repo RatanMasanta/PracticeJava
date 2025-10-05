@@ -9,7 +9,7 @@ public class RemoveDuplicatesInArray {
 
     void main(){
         int nums[] = {1,2,7,5,1,2,3,8};
-        System.out.println(STR."Array after removing ducplicates is: \{Arrays.toString(removeDuplicate(nums).toArray())}");
+        System.out.println("Array after removing ducplicates is: " + Arrays.toString(removeDuplicate(nums).toArray()));
     }
 
     ArrayList<Integer> removeDuplicate(int arr[]) {

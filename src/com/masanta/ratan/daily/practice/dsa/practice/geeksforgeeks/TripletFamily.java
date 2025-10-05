@@ -26,7 +26,7 @@ public class TripletFamily {
 
     public static void main(String[] args) {
         int[] arr = new int[] {1, 2, 3, 4, 5};
-        System.out.println(STR."Triplet exists in \{Arrays.toString(arr)} : \{findTriplet(arr)}");
+        System.out.println("Triplet exists in " + Arrays.toString(arr) +" : " + findTriplet(arr));
     }
 
     public static boolean findTriplet(int[] arr) {
